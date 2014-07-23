@@ -22,8 +22,8 @@ class MiddlecoinSpider(scrapy.Spider):
             item['UnexchangedBalance'] = line.xpath('td[5]/text()').extract()
             item['Balance'] = line.xpath('td[6]/text()').extract()
             item['PaidOut'] = line.xpath('td[7]/a/text()').extract()
-            #yield item
-            print item['Username'] , "  !!  " , item['Accepted'],"  !!  ",item['Rejected'] , "\n"
+            yield item
+            #print item['Username'] , "  !!  " , item['Accepted'],"  !!  ",item['Rejected'] , "\n"
 
 
 #Username    Accepted MH/s (Last Hour)   Rejected MH/s (Last Hour)   Immature Unexchanged Balance (estimated BTC)    Unexchanged Balance (estimated BTC)     Balance (BTC)   Paid Out (BTC)
