@@ -5,7 +5,7 @@ class MiddlecoinSpider(scrapy.Spider):
     name = "middlecoin"
     allowed_domains = ["middlecoin"]
     start_urls = [
-        "file:///home/liu/project/Middlecoin.html"
+        "http://www.middlecoin.com/allusers.html"
     ]
 
     def parse(self, response):
