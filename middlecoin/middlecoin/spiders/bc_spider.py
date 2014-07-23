@@ -16,12 +16,12 @@ class MiddlecoinSpider(scrapy.Spider):
             item['Username'] = line.xpath('td[1]/text()').extract()
             if item['Username']== [] or item['Username']==["Total"]:
                 continue
-            item['Accepted'] = line.xpath('td[2]/text()').extract()
-            item['Rejected'] = line.xpath('td[3]/text()').extract()
-            item['ImmatureUnexchangedBalance'] = line.xpath('td[4]/text()').extract()
-            item['UnexchangedBalance'] = line.xpath('td[5]/text()').extract()
-            item['Balance'] = line.xpath('td[6]/text()').extract()
-            item['PaidOut'] = line.xpath('td[7]/a/text()').extract()
+            # item['Accepted'] = line.xpath('td[2]/text()').extract()
+            # item['Rejected'] = line.xpath('td[3]/text()').extract()
+            # item['ImmatureUnexchangedBalance'] = line.xpath('td[4]/text()').extract()
+            # item['UnexchangedBalance'] = line.xpath('td[5]/text()').extract()
+            # item['Balance'] = line.xpath('td[6]/text()').extract()
+            # item['PaidOut'] = line.xpath('td[7]/a/text()').extract()
             yield item
             #print item['Username'] , "  !!  " , item['Accepted'],"  !!  ",item['Rejected'] , "\n"
 
